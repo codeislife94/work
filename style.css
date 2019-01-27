@@ -1,0 +1,128 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.flex-container-1 {
+    display: flex;
+    background-color: rgb(16, 2, 22);
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+
+    /* Alle drei Eigenschaften sorgen dafür, dass die Navbar
+    beim scrollen, mit nach unten geht. */
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
+.flex-container-1 p {
+    color: white;
+    font-weight: 300;
+    font-family: "Impact";
+    font-size: 15pt;
+    cursor: pointer;
+}
+
+.nav-item-1 {
+    margin-left: 40px;
+}
+
+.nav-item-2, .nav-item-3 {
+    margin-left: 20px;
+}
+.nav-item-4 {
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.flex-container-2 {
+    display: flex;
+    background-image: url(https://images.pexels.com/photos/1187439/pexels-photo-1187439.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    cursor: pointer;
+    border-bottom: 5px solid rgba(16, 2, 22, 0.7);
+}
+
+.flex-container-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 20px;
+}
+
+.flex-container-3 p{
+    margin: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 18pt;
+    width: auto;
+}
+
+.flex-container-3 img {
+    width: 250px;
+    height: 200px;
+    margin: auto;
+    cursor: pointer;
+}
+
+main h1 {
+    text-align: center;
+    font-size: 3em;
+    margin: 20px;
+}
+
+main hr {
+    width: 40em;
+    margin: auto;
+    box-shadow: 2px 1px 1px black;
+}
+
+footer {
+    background-color: rgb(16, 2, 22);
+    text-align: center;
+    color: white;
+    padding: 5px;
+}
+
+footer p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Gilt nur für Anwendungen, dass mit einem Screen etwas zu tun hat
+UND sobald der Screen kleiner als 600px wird. */
+@media only screen and (max-width: 600px)
+{
+    .flex-container-3 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        background-color: rgb(255, 255, 255);
+    }
+
+    main h1 {
+        text-align: center;
+        font-size: 2em;
+        margin-top: 20px;
+    }
+    
+    main hr {
+        width: 20em;
+        margin: auto;
+    }
+
+    .flex-container-1 p {
+        color: white;
+        font-weight: 100;
+        font-family: "Impact";
+        font-size: 12pt;
+    }  
+}
